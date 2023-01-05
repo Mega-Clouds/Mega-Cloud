@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="style.css?2022.08.11.08:44">
+</head>
+<body>
+<div class="lg-in red-box">
+							<div class="straight-box">
+								
+								<input type="file" placeholder="Please select a file" name="#">' 
+							</div> 
+</div>
+						<img src="#" id="myImage">
+<script src="jquery-3.6.0.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$('input:file').on('change', (function() {
+			if (this.files) {
+			var reader = new FileReader();
+			reader.onload = function(e) {
+				$('#myImage').attr('src', e.target.result).width(300).height(300);
+			}
+
+			reader.readAsDataURL(this.files[0]);
+		}
+		}));
+
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>some stuff</title>
+	<style type="text/css">
+		#im1 {
+			cursor: pointer;
+		}
+
+		#no {
+			display: none;
+			width: 23px;
+		}
+	</style>
+</head>
+<body>
+	<div><a><img id="im1" src="toggle.gif"><img id="no" src="no.png"></a></div>
+	<!-- <div id="no"><a><img src="no.png"></a></div> -->
+	<script src="jquery-3.6.0.js"></script>
+	<script type="text/javascript">
+		$(function() {
+			$('#im1').on('click', function() {
+				$('#im1').fadeOut();
+				$('#no').fadeIn();	
+			});
+		});
+	</script>
+
+</body>
+</html>

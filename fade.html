@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>The Fade Magic</title>
+</head>
+<body>
+
+	<div id="one"><span class="magic">This is div 111</span></div>		<!-- Holds the initially diaplayed value. Not in the array --> 
+	<script src="jquery-3.6.0.js"></script>
+	<script type="text/javascript">
+		let words = [										// Holds the values to display for me.
+			'This is div 111',			
+			'This is div 222',
+			'This is div 333'
+		];
+
+		let word = $('.magic');								// Selects the <span> element to display them values.
+		let i = 0;											// Sets the initial value of i to be 0.
+		setInterval(function() {
+			i = (i + 1) % words.length;						// This returns i = 0,1,2,0,1,2,... sequence.
+			$(function() {
+				word.fadeOut(1000, function() {				// This fades out that initial value of i and get ready for show.
+					word.html(words[i]).fadeIn(1000);		// This now fades in the remaining values into the <span> element.
+				});
+			});
+		}, 3000);
+	</script>
+</body>
+</html>

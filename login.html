@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Sign In</title>
+	<link rel="stylesheet" type="text/css" href="./style.css?2022.08.11.08:45">
+	<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+</head>
+<body>
+	<div class="lg-body">
+		<div id="lg-box">
+			<div id="lg-box-head">
+				<h3>LOGIN FORM</h3>
+				<h6>Please Fill Out This Form To Login!</h6>
+			</div>
+			<form action="" method="POST">
+				<div id="message-lg"></div>
+				<div class="lg-in">
+					<div class="straight-box">
+						<span><i class="fa fa-envelope"></i></span><input type="email" name="emaile" placeholder="Email" required>
+					</div>
+				</div>
+				<div class="lg-in">
+					<div class="straight-box">
+						<span><i class="fa fa-lock"></i></span><input type="password" name="passworde" placeholder="Password" required>
+					</div>
+				</div>
+				<div class="lg-forg">
+					<p><a href="">Forgot Password?</a></p>
+				</div>
+				<div class="lg-in">
+					<div class="straight-box" id="lg-proper">
+						<input onclick="login();" class="btn" id="btn-lg" type="button" value="Sign In" name="btn">
+					</div>
+				</div>
+				<div id="div-first-lastname" class="signup-input-divs">
+					<div class="first-lastname-box aye">
+						<div id="first-lastname-box1"></div>
+					</div>
+					<div id="or">Or</div>
+					<div class="first-lastname-box aye">
+						<div id="first-lastname-box1"></div>
+					</div>
+				</div>
+				<div class="lg-in">
+					<div class="straight-box" id="lg-proper">
+						<button class="btn" id="btn2" type="button" name="btn2"><img src="gn.png">Continue With Google</button>
+					</div>
+				</div>
+				<div class="lg-in" style="margin-top: 8px;">
+					<div class="straight-box" id="lg-proper">
+						<button class="btn" id="btn3" type="button" name="btn3"><img src="f32.ico">&nbsp;&nbsp;Continue With Facebook</button>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+
+<script src="jquery-3.6.0.js"></script>
+<script src="js.js"></script>
+</body>
+</html>
